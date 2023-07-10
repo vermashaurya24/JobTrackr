@@ -1,11 +1,23 @@
 const express = require("express");
+const cors = require('cors');
+
 const app = express();
+
+// Enable CORS for all routes
+app.use(cors());
+app.use(cors({
+  origin: 'http://localhost:3000'
+}));
+
 const connectDB = require("./db/connect");
+
 require("dotenv").config();
-const { registerUser, verifyUser } = require("./controllers/applications");
+
+const { registerUser, verifyUser, getAllApplications, getOneApplication, createApplication, updateApplication } = require("./controllers/applications");
+
 const port = 5000;
 
-const { applicationsTable, users } = require("./data");
+// const { applicationsTable, users } = require("./data");
 
 app.use(express.json());
 
@@ -16,34 +28,16 @@ app.post("/api/v1/registerUser", registerUser);
 app.get("/api/v1/login", verifyUser);
 
 //GET method to fetch all current applications
-app.get("/api/v1/:id", (req, res) => {
-  const { id } = req.params;
-  const user_applications = applicationsTable.filter(
-    (application) => application.id === parseInt(id)
-  );
-  res.status(200).send(user_applications);
-});
+app.get("/api/v1/:id", getAllApplications);
+
+//GET method to fetch one application
+app.get("/api/v1/:id/getOneApplication/:applicationId", getOneApplication);
 
 //POST method to create a new application
-app.post("/api/v1/:id/newApplication", (req, res) => {
-  const { id } = req.params;
-  const { company, position, application_status } = req.body;
-  const user_applications = applicationsTable.filter((application) => {
-    if (application.id === parseInt(id)) return application.applications;
-  });
-  user_applications.push({
-    company,
-    position,
-    application_status,
-  });
-
-  res.status(200).json(user_applications);
-});
+app.post("/api/v1/:id/newApplication", createApplication);
 
 //PATCH method to update some field of an existing application
-app.patch("/api/v1/:id/updateApplication", (req, res) => {
-  res.status(200).send("Updated the existing application");
-});
+app.patch("/api/v1/:id/updateApplication", updateApplication);
 
 const startApp = async () => {
   try {
