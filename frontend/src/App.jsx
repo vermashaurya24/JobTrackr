@@ -1,15 +1,17 @@
-import './App.css';
-import {Route, Routes} from 'react-router-dom';
-import Home from './pages/home/home.jsx';
-
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import AuthenticationPage from "./pages/AuthenticationPage";
+import Home from "./pages/home/home.jsx";
+//TODO: setup route for home page
 const App = () => {
   return (
-    <div>
+    <BrowserRouter>
       <Routes>
-          <Route path="/" element={<Home />} />
+        <Route path="/" element={<AuthenticationPage />} />
+        <Route path="/home/:id" element={<Home />} />
       </Routes>
-    </div>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;

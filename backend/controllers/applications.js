@@ -1,27 +1,33 @@
-const { applicationsTable, users } = require("../data");
 const Application = require("../models/Application");
 
 const registerUser = async (req, res) => {
+  const { userName } = req.body;
   try {
+    // console.log(userName);
+    const exists = await Application.findOne({ userName });
+    // console.log(exists);
+    if (exists) {
+      return res.status(202).json({ msg: "User already exists, please login" });
+    }
     const application = await Application.create(req.body);
-    res.status(201).json({ application });
+    res.status(201).json({ msg: "User created successfully", application });
   } catch (error) {
-    res.status(500).json({ msg: err });
+    res.status(500).json({ msg: error.message });
   }
 };
 
 const verifyUser = async (req, res) => {
   try {
     const { userName, password } = req.body;
-    const application = await Application.findOne({ userName }).exec();
+    const application = await Application.findOne({ userName });
     if (!application) {
-      return res.status(400).json({ message: "Username does not exist" });
+      return res.status(203).json({ msg: "Username does not exist" });
     } else if (application.password !== password) {
-      return res.status(400).json({ message: "Wrong password" });
+      return res.status(202).json({ msg: "Wrong password" });
     }
-    res.status(201).json({ application });
+    res.status(201).json({ msg: "Login successful", application });
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    res.status(500).json({ msg: error.message });
   }
 };
 
@@ -35,14 +41,17 @@ const getOneApplication = async (req, res) => {
   try {
     const { id } = req.params;
     const { applicationId } = req.params;
-    
+
     // Assuming you have a model named Application representing your application schema
-    const application = await Application.findOne({ userName: id, 'applications._id': applicationId }, { 'applications.$': 1 });
-    
+    const application = await Application.findOne(
+      { userName: id, "applications._id": applicationId },
+      { "applications.$": 1 }
+    );
+
     if (!application) {
-      return res.status(404).json({ message: 'Application not found' });
+      return res.status(404).json({ message: "Application not found" });
     }
-    
+
     const selectedApplication = application.applications[0];
     res.status(200).json(selectedApplication);
   } catch (error) {
@@ -60,7 +69,7 @@ const createApplication = async (req, res) => {
     application.applications.push({
       company,
       position,
-      status
+      status,
     });
 
     // Save the updated application to the database
@@ -68,7 +77,7 @@ const createApplication = async (req, res) => {
 
     res.status(200).json({ application: updatedApplication });
   } catch (error) {
-    res.status(500).json({ message: error.message});
+    res.status(500).json({ message: error.message });
   }
 };
 
@@ -105,8 +114,15 @@ const updateApplication = async (req, res) => {
 
     res.status(200).json({ message: "Application updated successfully" });
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    res.status(500).json({ msg: error.message });
   }
 };
 
-module.exports = { registerUser, verifyUser, getAllApplications, getOneApplication, createApplication, updateApplication };
+module.exports = {
+  registerUser,
+  verifyUser,
+  getAllApplications,
+  getOneApplication,
+  createApplication,
+  updateApplication,
+};
