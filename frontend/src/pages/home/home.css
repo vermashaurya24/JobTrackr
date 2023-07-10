@@ -1,0 +1,284 @@
+.macbook-air {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .macbook-air .overlap-wrapper {
+    background-color: #ffffff;
+    border: 1px none;
+    height: 832px;
+    overflow: hidden;
+    width: 1280px;
+  }
+  
+  .macbook-air .overlap {
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(251.81, 212.53, 176.27, 0.49) 0%,
+      rgba(252.88, 242.46, 232.86, 0) 100%
+    );
+    height: 850px;
+    left: -16px;
+    position: relative;
+    top: -18px;
+    width: 1312px;
+  }
+  
+  .macbook-air .list {
+    position: absolute;
+    top: 113px; /* Adjust the top value as per your requirement */
+    left: 377px;
+    width: 100%; /* Adjust the width as per your requirement */
+    height: auto; /* Remove the fixed height */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Adjust the alignment as per your requirement */
+    align-items: flex-start; /* Adjust the alignment as per your requirement */
+    z-index: 1;
+  }
+  
+  .macbook-air .overlap-group {
+    background-color: #ffffff;
+    border-radius: 3px;
+    box-shadow: 0px 0px 63px 18px #fbd4b07d;
+    height: 708px;
+    position: relative;
+    width: 558px;
+  }
+
+
+  .macbook-air .in-progress-list{
+    min-height: 50px; /* Set the minimum height */
+    max-height: 450px; /* Set the maximum height */
+    overflow-y: auto; /* Add vertical scrolling if needed */
+    position: relative;
+    top: 75px;
+    left: 19px;
+    width: 530px;
+  }
+
+
+  .macbook-air .list-item {
+    margin-bottom: 10px;
+  }
+  
+  
+  .macbook-air .list-item-1 {
+    height: 74px;
+    left: 19px;
+    position: absolute;
+    top: 608px;
+    width: 526px;
+  }
+  
+  .macbook-air .div {
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #0000001c;
+    border-radius: 6px;
+    height: 74px;
+    position: relative;
+    width: 520px;
+  }
+  
+  .macbook-air .text-wrapper {
+    color: #000000;
+    font-family: "Roboto-Bold", Helvetica;
+    font-size: 21px;
+    font-weight: 700;
+    left: 53px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 10px;
+    white-space: nowrap;
+  }
+  
+  .macbook-air .div-wrapper {
+    background-color: #fbd4b07d;
+    border-radius: 10px;
+    height: 31px;
+    left: 428px;
+    position: absolute;
+    top: 22px;
+    width: 84px;
+  }
+  
+  .macbook-air .text-wrapper-2 {
+    color: #000000;
+    font-family: "Roboto-SemiBold", Helvetica;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: normal;    
+    white-space: nowrap;
+  }
+  
+  .macbook-air .text-wrapper-3 {
+    color: #00000082;
+    font-family: "Roboto-Regular", Helvetica;
+    font-size: 12px;
+    font-weight: 400;
+    left: 53px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 41px;
+    white-space: nowrap;
+  }
+  
+  .macbook-air .edit-icon {
+    background-color: #ffffff;
+    border: 3px solid;
+    border-color: #000000;
+    border-radius: 13px/13.5px;
+    height: 27px;
+    left: 14px;
+    position: absolute;
+    top: 21px;
+    width: 26px;
+  }
+  
+  .macbook-air .edit {
+    height: 20px;
+    left: 2px;
+    position: absolute;
+    top: 3px;
+    width: 23px;
+  }
+  
+  .macbook-air .text-wrapper-4 {
+    color: #000000;
+    font-family: "Roboto-Regular", Helvetica;
+    font-size: 22px;
+    font-weight: 400;
+    left: 19px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 555px;
+    white-space: nowrap;
+  }
+  
+  .macbook-air .text-wrapper-6 {
+    color: #000000;
+    font-family: "Roboto-SemiBold", Helvetica;
+    font-size: 16px;
+    font-weight: 600;
+    left: 9px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 7px;
+    white-space: nowrap;
+  }
+  
+  .macbook-air .text-wrapper-7 {
+    color: #000000;
+    font-family: "Roboto-SemiBold", Helvetica;
+    font-size: 16px;
+    font-weight: 600;
+    left: 9px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 6px;
+    white-space: nowrap;
+  }
+  
+  .macbook-air .list-item-4 {
+    height: 74px;
+    left: 19px;
+    position: absolute;
+    top: 168px;
+    width: 526px;
+  }
+  
+  .macbook-air .list-item-5 {
+    height: 74px;
+    left: 19px;
+    position: absolute;
+    top: 77px;
+    width: 526px;
+  }
+  
+  .macbook-air .overlap-2 {
+    background-color: #fff9f9;
+    border: 1px solid;
+    border-color: #0000001c;
+    border-radius: 6px;
+    height: 74px;
+    position: relative;
+    width: 520px;
+  }
+  
+  .macbook-air .overlap-group-6 {
+    background-color: #fbd4b07d;
+    border-radius: 10px;
+    height: 28px;
+    left: 400px;
+    position: relative;
+    top: 22px;
+    display: inline-flex;
+    max-width: 110px;
+    background-color: #fbd4b07d;
+    align-items: center;
+    align-content: center;
+    padding: 1px 8px 1px 8px;
+  }
+  
+  .macbook-air .add-job-application {
+    height: 40px;
+    left: 389px;
+    position: absolute;
+    top: 20px;
+    width: 152px;
+    padding: 0px 1px;
+  }
+
+  .macbook-air .add-job-application:hover .overlap-3 {
+    background-color: #ffffff;
+  }
+
+  .macbook-air .add-job-application:hover .text-wrapper-8 {
+    color: #000000;
+  }
+  
+  .macbook-air .overlap-3 {
+    background-color: #000000cc;
+    border-radius: 5px;
+    height: 40px;
+    position: relative;
+    width: 150px;
+    border: 1px solid;
+  }
+  
+  .macbook-air .text-wrapper-8 {
+    color: #ffffff;
+    font-family: "Roboto-Regular", Helvetica;
+    font-size: 12px;
+    font-weight: 400;
+    left: 23px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 13px;
+    white-space: nowrap;
+  }
+  
+  .macbook-air .text-wrapper-9 {
+    color: #000000;
+    font-family: "Roboto-Regular", Helvetica;
+    font-size: 22px;
+    font-weight: 400;
+    left: 19px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 24px;
+    white-space: nowrap;
+  }
+  
