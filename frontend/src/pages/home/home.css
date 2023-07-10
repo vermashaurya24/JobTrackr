@@ -28,7 +28,7 @@
   }
   
   .macbook-air .list {
-    position: relative;
+    position: absolute;
     top: 113px; /* Adjust the top value as per your requirement */
     left: 377px;
     width: 100%; /* Adjust the width as per your requirement */
@@ -37,6 +37,7 @@
     flex-wrap: wrap;
     justify-content: flex-start; /* Adjust the alignment as per your requirement */
     align-items: flex-start; /* Adjust the alignment as per your requirement */
+    z-index: 1;
   }
   
   .macbook-air .overlap-group {
@@ -235,6 +236,15 @@
     position: absolute;
     top: 20px;
     width: 152px;
+    padding: 0px 1px;
+  }
+
+  .macbook-air .add-job-application:hover .overlap-3 {
+    background-color: #ffffff;
+  }
+
+  .macbook-air .add-job-application:hover .text-wrapper-8 {
+    color: #000000;
   }
   
   .macbook-air .overlap-3 {
@@ -243,6 +253,7 @@
     height: 40px;
     position: relative;
     width: 150px;
+    border: 1px solid;
   }
   
   .macbook-air .text-wrapper-8 {
