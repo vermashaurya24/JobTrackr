@@ -31,6 +31,25 @@ const getAllApplications = async (req, res) => {
   res.status(201).json(application.applications);
 };
 
+const getOneApplication = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { applicationId } = req.params;
+    
+    // Assuming you have a model named Application representing your application schema
+    const application = await Application.findOne({ userName: id, 'applications._id': applicationId }, { 'applications.$': 1 });
+    
+    if (!application) {
+      return res.status(404).json({ message: 'Application not found' });
+    }
+    
+    const selectedApplication = application.applications[0];
+    res.status(200).json(selectedApplication);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
 const createApplication = async (req, res) => {
   try {
     const { id } = req.params;
@@ -90,4 +109,4 @@ const updateApplication = async (req, res) => {
   }
 };
 
-module.exports = { registerUser, verifyUser, getAllApplications, createApplication, updateApplication };
+module.exports = { registerUser, verifyUser, getAllApplications, getOneApplication, createApplication, updateApplication };

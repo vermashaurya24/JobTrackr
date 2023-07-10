@@ -1,11 +1,23 @@
 const express = require("express");
+const cors = require('cors');
+
 const app = express();
+
+// Enable CORS for all routes
+app.use(cors());
+app.use(cors({
+  origin: 'http://localhost:3000'
+}));
+
 const connectDB = require("./db/connect");
+
 require("dotenv").config();
-const { registerUser, verifyUser, getAllApplications, createApplication, updateApplication } = require("./controllers/applications");
+
+const { registerUser, verifyUser, getAllApplications, getOneApplication, createApplication, updateApplication } = require("./controllers/applications");
+
 const port = 5000;
 
-const { applicationsTable, users } = require("./data");
+// const { applicationsTable, users } = require("./data");
 
 app.use(express.json());
 
@@ -17,6 +29,9 @@ app.get("/api/v1/login", verifyUser);
 
 //GET method to fetch all current applications
 app.get("/api/v1/:id", getAllApplications);
+
+//GET method to fetch one application
+app.get("/api/v1/:id/getOneApplication/:applicationId", getOneApplication);
 
 //POST method to create a new application
 app.post("/api/v1/:id/newApplication", createApplication);
