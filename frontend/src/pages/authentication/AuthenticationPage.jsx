@@ -40,7 +40,7 @@ const AuthenticationPage = () => {
       const response = await axios.post(`${BASE_URL}${url}`, formData);
       if (response.status !== 201)
         window.alert(`${response.data.msg}. Please try again`);
-      else if (url === "Sign In") {
+      else if (url === "login") {
         navigatePage();
       }
     } catch (error) {
