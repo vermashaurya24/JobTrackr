@@ -2,16 +2,17 @@ import React, {useState} from "react";
 import axios from "axios";
 import "./JobApplicationForm.css";
 
-const JobApplicationForm = ({UpdateOrNewApplicationFlag, FalseJobApplicationForm, ApplicationIdFromApi, companyFromApi, positionFromApi, statusFromApi, setListItems}) => {
+const JobApplicationForm = ({UpdateOrNewApplicationFlag, FalseJobApplicationForm, ApplicationIdFromApi, companyFromApi, positionFromApi, statusFromApi, setListItems, userNameFromApi}) => {
   const [applicationId, setapplicationId] = useState(ApplicationIdFromApi || '');
   const [company, setCompany] = useState(companyFromApi || '');
   const [position, setPosition] = useState(positionFromApi || '');
   const [status, setStatus] = useState(statusFromApi || '');
+  const username = userNameFromApi; 
 
   const CloseFormAndFetchAllApplications = async () => {
     // after completion of SaveNewApplication and EditApplication, this function gets executed which closes the JobApplicationForm form component using FalseJobApplicationForm and make a api call to fetch all applications 
     try {
-      const response = await axios.get('http://localhost:5000/api/v1/Neeraj');
+      const response = await axios.get(`http://localhost:5000/api/v1/${username}`);
       const { data } = response;
       setListItems(data);
     } catch (error) {
