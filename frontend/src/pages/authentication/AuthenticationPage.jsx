@@ -69,6 +69,16 @@ const AuthenticationPage = () => {
   return (
     <div className="auth-macbook-air">
       <div className="auth-overlap-wrapper">
+        <h1 className="signature">
+          Created by{" "}
+          <a href="https://github.com/vermashaurya24" target="_blank">
+            Shaurya
+          </a>{" "}
+          and{" "}
+          <a href="https://github.com/NeerajHazarika" target="_blank">
+            Neeraj
+          </a>{" "}
+        </h1>
         <div className="auth-overlap">
           <div className="auth-login-signup">
             <div className="sign-in-button">
