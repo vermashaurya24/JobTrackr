@@ -147,6 +147,7 @@
     position: absolute;
     top: 21px;
     width: 26px;
+    cursor: pointer;
   }
   
   .macbook-air .edit {
