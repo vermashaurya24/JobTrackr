@@ -32,7 +32,7 @@ const JobApplicationForm = ({UpdateOrNewApplicationFlag, FalseJobApplicationForm
 
     try {
       // Send the POST request to the API endpoint using Axios
-      const response = await axios.post(`http://localhost:5000/api/v1/Neeraj/newApplication`, requestBody);
+      const response = await axios.post(`http://localhost:5000/api/v1/${username}/newApplication`, requestBody);
 
       FalseJobApplicationForm();
       CloseFormAndFetchAllApplications();
@@ -60,7 +60,7 @@ const JobApplicationForm = ({UpdateOrNewApplicationFlag, FalseJobApplicationForm
 
     try {
       // Send the PATCH request to the API endpoint using Axios
-      const response = await axios.patch(`http://localhost:5000/api/v1/Neeraj/updateApplication`, requestBody);
+      const response = await axios.patch(`http://localhost:5000/api/v1/${username}/updateApplication`, requestBody);
 
       FalseJobApplicationForm();
       CloseFormAndFetchAllApplications();
@@ -91,12 +91,12 @@ const JobApplicationForm = ({UpdateOrNewApplicationFlag, FalseJobApplicationForm
         <form onSubmit={handleSubmit}>
           <div className="overlap">
             <button type="submit" className="save-button">
-              <div className="overlap-group">
+              <div className="job-application-form-overlap-group">
                 <div className="text-wrapper">Save</div>
               </div>
             </button>
             <button className="cancel-button" onClick={FalseJobApplicationForm}>
-              <div className="overlap-group">
+              <div className="job-application-form-overlap-group">
                 <div className="text-wrapper">Cancel</div>
               </div>
             </button>

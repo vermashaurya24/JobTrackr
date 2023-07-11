@@ -6,6 +6,7 @@
     width: 100%;
     position: relative;
     z-index: 2;
+    height: 583px;
   }
   
   .box .job-applicatin-form {
@@ -36,9 +37,10 @@
     top: 334px;
     width: 187px;
     padding: 0px 1px;
+    cursor: pointer;
   }
   
-  .box .overlap-group {
+  .box .job-application-form-overlap-group {
     background-color: #000000cc;
     border-radius: 5px;
     height: 40px;
@@ -46,13 +48,13 @@
     width: 185px;
   }
 
-  .box .overlap-group:hover {
+  .box .job-application-form-overlap-group:hover {
     background-color: #ffffff;
     border: 1px solid;
     border-color: #000000;
   }
 
-  .box .overlap-group:hover .text-wrapper {
+  .box .job-application-form-overlap-group:hover .text-wrapper {
     color: #000000;
   }
   
@@ -81,6 +83,7 @@
     top: 334px;
     width: 187px;
     padding: 0px 1px;
+    cursor: pointer;
   }
   
   .box .div {

@@ -5,10 +5,10 @@ import './home.css';
 import editIcon from '../../assets/icons8-edit-1-5.svg.svg';
 import JobApplicationForm from '../../components/home/JobApplicationForm.jsx';
 
-const ListItem = ({_id, company, status, position, setJobApplicationForm}) => {
+const ListItem = ({username, _id, company, status, position, setJobApplicationForm}) => {
     const handleEditIconClick = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/v1/Neeraj/getOneApplication/${_id}`);
+        const response = await axios.get(`http://localhost:5000/api/v1/${username}/getOneApplication/${_id}`);
         const { data } = response;
         setJobApplicationForm(data);
       } catch (error) {
@@ -88,7 +88,7 @@ const Home = () =>{
                   </button>
                   <div className="in-progress-list">
                     {listItems.map((item, index) => (
-                        <ListItem key={index} _id={item._id} company={item.company} status={item.status} position={item.position} setJobApplicationForm={setJobApplicationForm}/>
+                        <ListItem key={index} username={username} _id={item._id} company={item.company} status={item.status} position={item.position} setJobApplicationForm={setJobApplicationForm}/>
                     ))}
                   </div>
                   <div className="text-wrapper-4">Accepted</div>
