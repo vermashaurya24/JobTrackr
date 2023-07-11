@@ -49,15 +49,24 @@
 
 
   .macbook-air .in-progress-list{
-    min-height: 50px; /* Set the minimum height */
-    max-height: 450px; /* Set the maximum height */
-    overflow-y: auto; /* Add vertical scrolling if needed */
+    min-height: 50px;
+    max-height: 274px;
+    overflow-y: auto;
     position: relative;
     top: 75px;
     left: 19px;
     width: 530px;
   }
 
+  .macbook-air .accepted-list{
+    min-height: 50px;
+    max-height: 274px;
+    overflow-y: auto;
+    position: relative;
+    top: 153px;
+    left: 19px;
+    width: 530px;
+  }
 
   .macbook-air .list-item {
     margin-bottom: 10px;
@@ -157,7 +166,7 @@
     letter-spacing: 0;
     line-height: normal;
     position: absolute;
-    top: 555px;
+    top: 382px;
     white-space: nowrap;
   }
   
@@ -210,7 +219,7 @@
     border-radius: 6px;
     height: 74px;
     position: relative;
-    width: 520px;
+    width: 502px;
   }
   
   .macbook-air .overlap-group-6 {
@@ -236,14 +245,6 @@
     width: 152px;
     padding: 0px 1px;
     cursor: pointer;
-  }
-
-  .macbook-air .add-job-application:hover .overlap-3 {
-    background-color: #ffffff;
-  }
-
-  .macbook-air .add-job-application:hover .text-wrapper-8 {
-    color: #000000;
   }
   
   .macbook-air .overlap-3 {

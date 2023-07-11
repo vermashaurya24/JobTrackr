@@ -3,7 +3,7 @@ const bcrypt = require("bcrypt");
 
 const registerUser = async (req, res) => {
   const { userName, password } = req.body;
-  
+
   try {
     const exists = await Application.findOne({ userName });
     if (exists) {
@@ -98,7 +98,7 @@ const createApplication = async (req, res) => {
     application.applications.push({
       company,
       position,
-      status,
+      status: status.toLowerCase(),
     });
 
     // Save the updated application to the database

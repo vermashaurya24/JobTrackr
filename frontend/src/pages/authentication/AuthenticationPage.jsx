@@ -4,7 +4,6 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const AuthenticationPage = () => {
-  const BASE_URL = "http://localhost:5000/api/v1/";
   const messageValues = [
     "Don't have an account yet? Sign Up",
     "Already have an account? Sign In",
@@ -37,7 +36,10 @@ const AuthenticationPage = () => {
     };
     const url = submitButton === "Sign In" ? "login" : "registerUser";
     try {
-      const response = await axios.post(`${BASE_URL}${url}`, formData);
+      const response = await axios.post(
+        `${process.env.REACT_APP_BASE_URL}${url}`,
+        formData
+      );
       if (response.status !== 201)
         window.alert(`${response.data.msg}. Please try again`);
       else if (url === "login") {
@@ -69,40 +71,40 @@ const AuthenticationPage = () => {
       <div className="auth-overlap-wrapper">
         <div className="auth-overlap">
           <div className="auth-login-signup">
-              <div className="sign-in-button">
-                <div className="div-wrapper">
-                  <button className="button" onClick={handleButtonClick}>
-                    {submitButton}
-                  </button>
-                </div>
-              </div>
-              <div className="password-input-field">
-                <input
-                  type="password"
-                  id="password"
-                  className="overlap-2"
-                  value={password}
-                  onChange={setPasswordChange}
-                />
-              </div>
-              <div className="auth-text-wrapper-2">Password</div>
-              <div className="email-address-input">
-                <input
-                  type="text"
-                  className="overlap-2"
-                  onChange={handleUsernameChange}
-                />
-              </div>
-              <div className="auth-text-wrapper-4">User Name</div>
-              <p className="don-t-have-an">
-                <button className="auth-text-wrapper-7" onClick={handleSignUp}>
-                  {signUpButton}
+            <div className="sign-in-button">
+              <div className="div-wrapper">
+                <button className="button" onClick={handleButtonClick}>
+                  {submitButton}
                 </button>
-              </p>
-              <div className="auth-text-wrapper-8">Welcome back</div>
-              <p className="auth-text-wrapper-9">
-                Please enter your details to sign in
-              </p>
+              </div>
+            </div>
+            <div className="password-input-field">
+              <input
+                type="password"
+                id="password"
+                className="overlap-2"
+                value={password}
+                onChange={setPasswordChange}
+              />
+            </div>
+            <div className="auth-text-wrapper-2">Password</div>
+            <div className="email-address-input">
+              <input
+                type="text"
+                className="overlap-2"
+                onChange={handleUsernameChange}
+              />
+            </div>
+            <div className="auth-text-wrapper-4">User Name</div>
+            <p className="don-t-have-an">
+              <button className="auth-text-wrapper-7" onClick={handleSignUp}>
+                {signUpButton}
+              </button>
+            </p>
+            <div className="auth-text-wrapper-8">Welcome back</div>
+            <p className="auth-text-wrapper-9">
+              Please enter your details to sign in
+            </p>
           </div>
         </div>
       </div>

@@ -39,6 +39,10 @@
   top: 345px;
   width: 400px;
  }
+
+ .auth-macbook-air .sign-in-button button{
+  cursor: pointer;
+ }
  
  .auth-macbook-air .div-wrapper {
    background-color: #000000cc;
