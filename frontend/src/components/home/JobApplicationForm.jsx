@@ -12,7 +12,7 @@ const JobApplicationForm = ({UpdateOrNewApplicationFlag, FalseJobApplicationForm
   const CloseFormAndFetchAllApplications = async () => {
     // after completion of SaveNewApplication and EditApplication, this function gets executed which closes the JobApplicationForm form component using FalseJobApplicationForm and make a api call to fetch all applications 
     try {
-      const response = await axios.get(`http://localhost:5000/api/v1/${username}`);
+      const response = await axios.get(`http://localhost:5000/api/v1/${username}/getAllApplication`);
       const { data } = response;
       setListItems(data);
     } catch (error) {

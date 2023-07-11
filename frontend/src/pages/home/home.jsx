@@ -63,7 +63,7 @@ const Home = () =>{
     useEffect(() => {
       const fetchData = async () => {
         try {
-          const response = await axios.get(`http://localhost:5000/api/v1/${username}`);
+          const response = await axios.get(`http://localhost:5000/api/v1/${username}/getAllApplication`);
           const { data } = response;
           setListItems(data);
         } catch (error) {
