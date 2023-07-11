@@ -12,7 +12,7 @@ const JobApplicationForm = ({UpdateOrNewApplicationFlag, FalseJobApplicationForm
   const CloseFormAndFetchAllApplications = async () => {
     // after completion of SaveNewApplication and EditApplication, this function gets executed which closes the JobApplicationForm form component using FalseJobApplicationForm and make a api call to fetch all applications 
     try {
-      const response = await axios.get(`http://localhost:5000/api/v1/${username}/getAllApplication`);
+      const response = await axios.get(`${process.env.REACT_APP_BASE_URL}${username}/getAllApplication`);
       const { data } = response;
       setListItems(data);
     } catch (error) {
@@ -32,7 +32,7 @@ const JobApplicationForm = ({UpdateOrNewApplicationFlag, FalseJobApplicationForm
 
     try {
       // Send the POST request to the API endpoint using Axios
-      const response = await axios.post(`http://localhost:5000/api/v1/${username}/newApplication`, requestBody);
+      const response = await axios.post(`${process.env.REACT_APP_BASE_URL}${username}/newApplication`, requestBody);
 
       FalseJobApplicationForm();
       CloseFormAndFetchAllApplications();
@@ -60,7 +60,7 @@ const JobApplicationForm = ({UpdateOrNewApplicationFlag, FalseJobApplicationForm
 
     try {
       // Send the PATCH request to the API endpoint using Axios
-      const response = await axios.patch(`http://localhost:5000/api/v1/${username}/updateApplication`, requestBody);
+      const response = await axios.patch(`${process.env.REACT_APP_BASE_URL}${username}/updateApplication`, requestBody);
 
       FalseJobApplicationForm();
       CloseFormAndFetchAllApplications();
