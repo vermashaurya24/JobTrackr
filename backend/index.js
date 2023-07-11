@@ -36,7 +36,7 @@ app.post("/api/v1/registerUser", registerUser);
 app.post("/api/v1/login", verifyUser);
 
 //GET method to fetch all current applications
-app.get("/api/v1/:id", getAllApplications);
+app.get("/api/v1/:id/getAllApplication", getAllApplications);
 
 //GET method to fetch one application
 app.get("/api/v1/:id/getOneApplication/:applicationId", getOneApplication);
