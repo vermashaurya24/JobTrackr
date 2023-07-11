@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./AuthenticationPage.css";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const AuthenticationPage = () => {
   const BASE_URL = "http://localhost:5000/api/v1/";
@@ -12,6 +13,7 @@ const AuthenticationPage = () => {
   const [userName, setUserName] = useState("");
   const [signUpButton, setSignUpButton] = useState(messageValues[0]);
   const [submitButton, setSubmitButton] = useState("Sign In");
+  const navigate = useNavigate();
 
   const setPasswordChange = (e) => {
     e.preventDefault();
@@ -21,6 +23,10 @@ const AuthenticationPage = () => {
   const handleUsernameChange = (e) => {
     e.preventDefault();
     setUserName(e.target.value);
+  };
+
+  const navigatePage = () => {
+    navigate(`/home/${userName}`);
   };
 
   //to check the login status.
@@ -34,6 +40,9 @@ const AuthenticationPage = () => {
       const response = await axios.post(`${BASE_URL}${url}`, formData);
       if (response.status !== 201)
         window.alert(`${response.data.msg}. Please try again`);
+      else if (url === "Sign In") {
+        navigatePage();
+      }
     } catch (error) {
       console.log(error);
     }

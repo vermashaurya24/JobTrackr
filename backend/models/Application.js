@@ -11,7 +11,7 @@ const ApplicationSchema = new mongoose.Schema({
     type: String,
     required: [true, "Must provide a password"],
     trim: true,
-    maxlength: [20, "Password must be less than 20 characters"],
+    maxlength: [300, "Password must be less than 300 characters"],
   },
   applications: [
     {
