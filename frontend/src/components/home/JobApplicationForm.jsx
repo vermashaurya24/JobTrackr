@@ -60,7 +60,7 @@ const JobApplicationForm = ({UpdateOrNewApplicationFlag, FalseJobApplicationForm
 
     try {
       // Send the PATCH request to the API endpoint using Axios
-      const response = await axios.patch(`${process.env.REACT_APP_BASE_URL}${username}/updateApplication`, requestBody);
+      await axios.patch(`${process.env.REACT_APP_BASE_URL}${username}/updateApplication`, requestBody);
 
       FalseJobApplicationForm();
       CloseFormAndFetchAllApplications();
