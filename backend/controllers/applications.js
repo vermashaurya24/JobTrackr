@@ -32,9 +32,13 @@ const verifyUser = async (req, res) => {
 };
 
 const getAllApplications = async (req, res) => {
-  const { id } = req.params;
-  const application = await Application.findOne({ userName: id });
-  res.status(201).json(application.applications);
+  try {
+    const { id } = req.params;
+    const application = await Application.findOne({ userName: id });
+    res.status(201).json(application.applications);
+  } catch (error) {
+    res.status(500).json({ msg: error.message });
+  }
 };
 
 const getOneApplication = async (req, res) => {
