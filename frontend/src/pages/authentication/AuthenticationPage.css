@@ -1,20 +1,19 @@
-.macbook-air {
+.auth-macbook-air {
   background-color: #ffffff;
   display: flex;
   flex-direction: row;
   justify-content: center;
   width: 100%;
-  height: 100vh;
  }
  
- .macbook-air .overlap-wrapper {
+ .auth-macbook-air .auth-overlap-wrapper {
    background-color: #ffffff;
    border: 1px none;
    height: 850px;
    width: 1312px;
  }
  
- .macbook-air .overlap {
+ .auth-macbook-air .auth-overlap {
   background: radial-gradient( 50% 50% at 50% 50%, rgba(251.81, 212.53, 176.27, 0.49) 0%, rgba(252.88, 242.46, 232.86, 0) 100% );
   height: 799px;
   position: relative;
@@ -23,22 +22,17 @@
   justify-content: center;
  }
  
- .macbook-air .login-signup {
-  top: 75px;
-  width: 473px;
-  position: absolute;
- }
- 
- .macbook-air .overlap-group {
+ .auth-macbook-air .auth-login-signup {
   background-color: #ffffff;
   border-radius: 5px;
   box-shadow: 0px 0px 104px 6px #fbd4b07d;
   height: 476px;
   position: absolute;
   width: 457px;
+  position: absolute;
  }
  
- .macbook-air .sign-in-button {
+ .auth-macbook-air .sign-in-button {
   height: 47px;
   left: 30px;
   position: absolute;
@@ -46,7 +40,7 @@
   width: 400px;
  }
  
- .macbook-air .div-wrapper {
+ .auth-macbook-air .div-wrapper {
    background-color: #000000cc;
    border-radius: 6px;
    height: 47px;
@@ -54,7 +48,7 @@
    width: 398px;
  }
 
- .macbook-air .div-wrapper .button {
+ .auth-macbook-air .div-wrapper .button {
   color: white;
   font-size: medium;
    background-color: #000000cc;
@@ -64,7 +58,7 @@
    width: 398px;
  }
  
- .macbook-air .text-wrapper {
+ .auth-macbook-air .auth-text-wrapper {
    color: #ffffff;
    font-family: "Poppins-SemiBold", Helvetica;
    font-size: 15px;
@@ -76,7 +70,7 @@
    top: 12px;
  }
  
- .macbook-air .div {
+ .auth-macbook-air .div {
    color: #000000;
    font-family: "Roboto-Regular", Helvetica;
    font-size: 15px;
@@ -89,7 +83,7 @@
    white-space: nowrap;
  }
  
- .macbook-air .rectangle {
+ .auth-macbook-air .rectangle {
    background-color: #ffffff;
    box-shadow: 0px 2px 1px 1px #0000002b;
    height: 14px;
@@ -99,7 +93,7 @@
    width: 15px;
  }
  
- .macbook-air .password-input-field {
+ .auth-macbook-air .password-input-field {
   height: 44px;
   left: 32px;
   position: absolute;
@@ -107,7 +101,7 @@
   width: 396px;
  }
  
- .macbook-air .overlap-2 {
+ .auth-macbook-air .overlap-2 {
    background-color: #ffffff;
    border: 1px solid;
    border-color: #00000026;
@@ -116,7 +110,7 @@
    width: 394px;
  }
  
- .macbook-air .p {
+ .auth-macbook-air .p {
    color: #000000;
    font-family: "Roboto-Black", Helvetica;
    font-size: 22px;
@@ -130,7 +124,7 @@
    width: 130px;
  }
  
- .macbook-air .text-wrapper-2 {
+ .auth-macbook-air .auth-text-wrapper-2 {
   color: #000000;
   font-family: "Roboto-Regular", Helvetica;
   font-size: 15px;
@@ -139,11 +133,11 @@
   letter-spacing: 0;
   line-height: normal;
   position: absolute;
-  top: 230px;
   white-space: nowrap;
+  top: 229px;
  }
  
- .macbook-air .email-address-input {
+ .auth-macbook-air .email-address-input {
   height: 44px;
   left: 32px;
   position: absolute;
@@ -151,7 +145,7 @@
   width: 396px;
  }
  
- .macbook-air .text-wrapper-3 {
+ .auth-macbook-air .auth-text-wrapper-3 {
    color: #000000;
    font-family: "Roboto-Regular", Helvetica;
    font-size: 16px;
@@ -165,7 +159,7 @@
    width: 135px;
  }
  
- .macbook-air .text-wrapper-4 {
+ .auth-macbook-air .auth-text-wrapper-4 {
   color: #000000;
   font-family: "Roboto-Regular", Helvetica;
   font-size: 15px;
@@ -178,7 +172,7 @@
   white-space: nowrap;
  }
  
- .macbook-air .line {
+ .auth-macbook-air .line {
    height: 1px;
    left: 248px;
    object-fit: cover;
@@ -187,7 +181,7 @@
    width: 178px;
  }
  
- .macbook-air .text-wrapper-5 {
+ .auth-macbook-air .auth-text-wrapper-5 {
    color: #000000;
    font-family: "Roboto-Regular", Helvetica;
    font-size: 13px;
@@ -201,7 +195,7 @@
    width: 18px;
  }
  
- .macbook-air .img {
+ .auth-macbook-air .img {
    height: 1px;
    left: 32px;
    object-fit: cover;
@@ -210,7 +204,7 @@
    width: 178px;
  }
  
- .macbook-air .apple-login-button {
+ .auth-macbook-air .apple-login-button {
    background-color: #ffffff;
    border: 1px solid;
    border-color: #00000026;
@@ -222,7 +216,7 @@
    width: 122px;
  }
  
- .macbook-air .apple-logo-black-svg {
+ .auth-macbook-air .apple-logo-black-svg {
    height: 18px;
    left: 51px;
    position: absolute;
@@ -230,7 +224,7 @@
    width: 16px;
  }
  
- .macbook-air .google-login-button {
+ .auth-macbook-air .google-login-button {
    background-color: #ffffff;
    border: 1px solid;
    border-color: #00000026;
@@ -242,7 +236,7 @@
    width: 122px;
  }
  
- .macbook-air .google-logo {
+ .auth-macbook-air .google-logo {
    height: 23px;
    left: 48px;
    position: absolute;
@@ -250,7 +244,7 @@
    width: 24px;
  }
  
- .macbook-air .twitter-login-button {
+ .auth-macbook-air .twitter-login-button {
    background-color: #ffffff;
    border: 1px solid;
    border-color: #00000026;
@@ -262,7 +256,7 @@
    width: 122px;
  }
  
- .macbook-air .twitter {
+ .auth-macbook-air .twitter {
    height: 26px;
    left: 46px;
    position: absolute;
@@ -270,7 +264,7 @@
    width: 29px;
  }
  
- .macbook-air .text-wrapper-6 {
+ .auth-macbook-air .auth-text-wrapper-6 {
    color: #00000087;
    font-family: "Roboto-Regular", Helvetica;
    font-size: 15px;
@@ -284,7 +278,7 @@
    white-space: nowrap;
  }
  
- .macbook-air .don-t-have-an {
+ .auth-macbook-air .don-t-have-an {
   color: transparent;
   font-family: "Roboto-Regular", Helvetica;
   font-size: 16px;
@@ -297,7 +291,7 @@
   white-space: nowrap;
  }
 
- .macbook-air .don-t-have-an button {
+ .auth-macbook-air .don-t-have-an button {
   background-color: transparent;
   border: none;
   outline: none;
@@ -306,15 +300,15 @@
   cursor: pointer;
  }
  
- .macbook-air .span {
+ .auth-macbook-air .span {
    color: #00000087;
  }
  
- .macbook-air .text-wrapper-7 {
+ .auth-macbook-air .auth-text-wrapper-7 {
    color: #000000;
  }
  
- .macbook-air .text-wrapper-8 {
+ .auth-macbook-air .auth-text-wrapper-8 {
   color: #000000;
   font-family: "Roboto-Regular", Helvetica;
   font-size: 22px;
@@ -328,7 +322,7 @@
   width: 150px;
  }
  
- .macbook-air .text-wrapper-9 {
+ .auth-macbook-air .auth-text-wrapper-9 {
    color: #000000;
     font-family: "Roboto-Regular", Helvetica;
     font-size: 20px;

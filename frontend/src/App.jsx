@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import AuthenticationPage from "./pages/AuthenticationPage";
+import AuthenticationPage from "./pages/authentication/AuthenticationPage";
 import Home from "./pages/home/home.jsx";
 //TODO: setup route for home page
 const App = () => {
@@ -8,7 +8,7 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<AuthenticationPage />} />
-        <Route path="/home/:id" element={<Home />} />
+        <Route path="/home/:username" element={<Home />} />
       </Routes>
     </BrowserRouter>
   );

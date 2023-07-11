@@ -65,11 +65,10 @@ const AuthenticationPage = () => {
   };
 
   return (
-    <div className="macbook-air">
-      <div className="overlap-wrapper">
-        <div className="overlap">
-          <div className="login-signup">
-            <div className="overlap-group">
+    <div className="auth-macbook-air">
+      <div className="auth-overlap-wrapper">
+        <div className="auth-overlap">
+          <div className="auth-login-signup">
               <div className="sign-in-button">
                 <div className="div-wrapper">
                   <button className="button" onClick={handleButtonClick}>
@@ -86,7 +85,7 @@ const AuthenticationPage = () => {
                   onChange={setPasswordChange}
                 />
               </div>
-              <div className="text-wrapper-2">Password</div>
+              <div className="auth-text-wrapper-2">Password</div>
               <div className="email-address-input">
                 <input
                   type="text"
@@ -94,17 +93,16 @@ const AuthenticationPage = () => {
                   onChange={handleUsernameChange}
                 />
               </div>
-              <div className="text-wrapper-4">User Name</div>
+              <div className="auth-text-wrapper-4">User Name</div>
               <p className="don-t-have-an">
-                <button className="text-wrapper-7" onClick={handleSignUp}>
+                <button className="auth-text-wrapper-7" onClick={handleSignUp}>
                   {signUpButton}
                 </button>
               </p>
-              <div className="text-wrapper-8">Welcome back</div>
-              <p className="text-wrapper-9">
+              <div className="auth-text-wrapper-8">Welcome back</div>
+              <p className="auth-text-wrapper-9">
                 Please enter your details to sign in
               </p>
-            </div>
           </div>
         </div>
       </div>

@@ -3,7 +3,7 @@ const bcrypt = require("bcrypt");
 
 const registerUser = async (req, res) => {
   const { userName, password } = req.body;
-  console.log(userName, password);
+  
   try {
     const exists = await Application.findOne({ userName });
     if (exists) {
@@ -21,7 +21,6 @@ const registerUser = async (req, res) => {
           password: hash,
         });
 
-        console.log(application);
         return res
           .status(201)
           .json({ msg: "User created successfully", application });
@@ -61,10 +60,9 @@ const getAllApplications = async (req, res) => {
   try {
     const { id } = req.params;
     const application = await Application.findOne({ userName: id });
-    if (application) res.status(201).json(application.applications);
-    else res.send("....");
+    res.status(201).json(application.applications);
   } catch (error) {
-    console.log(error);
+    res.status(500).json({ msg: error.message });
   }
 };
 
